@@ -10,5 +10,6 @@ How to Set Up :
 4. build server/client with npm run build or yarn build
 
 ###############################################
-contact me at - mjha205@rku.ac.in
+contact me at - 
+mjha205@rku.ac.in
 ###############################################
