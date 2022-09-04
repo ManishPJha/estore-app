@@ -2,7 +2,6 @@
 
 ####################
 How to Set Up :
-####################
 
 1. in both server & client directory run : npm install or yarn install
 2. Edit Configuration files accourdingly in server side config directory
@@ -11,4 +10,3 @@ How to Set Up :
 
 ####################
 contact me at : mjha205@rku.ac.in
-####################
