@@ -50,6 +50,10 @@ const productScheama = new mongoose.Schema({
         type: Number,
         default: 1
     },
+    stock: {
+        type: Number,
+        default: 1
+    },
     category: {
         required: [true, "Please enter a product category"],
         type: String,
