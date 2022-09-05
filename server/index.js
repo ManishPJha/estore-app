@@ -9,8 +9,9 @@ const cookieParser = require("cookie-parser")
 const errorMiddleware = require("./middlewares/errors")
 
 // routes
-const products = require("./routes/product.route.js")
-const auth = require("./routes/auth.route.js")
+const products = require("./routes/product.routes")
+const auth = require("./routes/auth.routes")
+const order = require("./routes/order.routes")
 
 // Handle Uncaught exceptions
 process.on('uncaughtException', (error) => {
@@ -34,6 +35,7 @@ app.use(cookieParser());
 
 app.use(BASE_URI, products);
 app.use(BASE_URI, auth);
+app.use(BASE_URI, order);
 
 // Middleware To Handle Errors
 app.use(errorMiddleware);
