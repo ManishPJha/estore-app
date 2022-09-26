@@ -14,12 +14,15 @@ const {
     isAuthorizedUser,
     authorizedRoles
  } = require('../middlewares/authorizedRoutes')
+ const {
+    uploadProductStaticsFile
+ } = require('../middlewares/uploadProductStaticsFile')
 
 const router = express.Router();
 
 router.route("/products").get(getProducts);
 router.route("/products/:id").get(getProduct);
-router.route("/products/create").post(isAuthorizedUser, authorizedRoles('admin'), createProduct);
+router.route("/products/create").post(isAuthorizedUser, authorizedRoles('admin'), uploadProductStaticsFile, createProduct);
 router.route("/admin/products/:id")
     .put(isAuthorizedUser, authorizedRoles('admin'), updateProduct)
     .delete(isAuthorizedUser, authorizedRoles('admin'), deleteProduct);

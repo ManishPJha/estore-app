@@ -32,6 +32,11 @@ const BASE_URI = "/api/v1";
 
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(express.static("uploads"));
+
+app.get("/upload", (req, res) => {
+    res.render('upload');
+})
 
 app.use(BASE_URI, products);
 app.use(BASE_URI, auth);

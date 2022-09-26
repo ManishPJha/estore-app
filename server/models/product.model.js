@@ -17,14 +17,18 @@ const productScheama = new mongoose.Schema({
         {
             public_id: {
                 type: String,
-                required: true
+                required: false
             },
             url: {
                 type: String,
-                required: true
+                required: false
             }
         }
     ],
+    cgvURL: {
+      type: String,
+      required: false,
+    },
     productPrice: {
         type: Number,
         required: [true, "Please enter a product price"],
@@ -35,19 +39,19 @@ const productScheama = new mongoose.Schema({
             user: {
                 type: mongoose.Schema.ObjectId,
                 ref: 'User',
-                required: true,
+                required: false,
             },
             name: {
                 type: String,
-                required: true
+                required: false
             },
             rating: {
                 type: Number,
-                required: true
+                required: false
             },
             comment: {
                 type: String,
-                required: true
+                required: false
             }
         }
     ],
